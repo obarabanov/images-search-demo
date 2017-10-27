@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image search and extraction</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            /*position: relative;*/
+            /*display: block;*/
+        }
+
+        #popup {
+
+            margin: 0 auto;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            width: 400px;
+            height: 150px;
+
+            /*
+            position: absolute;
+            top: 40%;
+            bottom: 50%;
+            left: 40%;
+            right: 45%;
+            */
+            /*
+            left: 50px;
+            right: 50px;
+            
+            min-width: 400px;
+            min-height: 150px;
+
+            max-width: 400px;
+            */
+            
+            /*height: 100%;*/
+
+            border: 4px outset lightgrey;
+            /*border-bottom: 1px solid grey;*/
+            padding: 15px;
+
+        }
+
+        input[type="text"] {
+            width: 87%;
+        }
+
+        input[type="submit"] {
+            margin-left: 5px;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+        .wrapper {
+            /*width: 100%;*/
+            /*
+            display: inline-block;
+            display: inline;
+            */
+        }
+
+    </style>
+    <script src="search.js"></script>
+</head>
+<body onload="onLoad()">
+
+    <!--
+    <header>
+        <h2>Control panel</h2>
+    </header>
+
+    <footer>
+        <p>
+            footer..
+        </p>
+    </footer>
+    -->
+    
+    <!--
+    <div id="screen"  onclick="onClick(event)">
+    </div>
+    -->
+
+    <div id="popup">
+        <form class="subform" method="get" action="submit.html">
+            <!-- <div class="wrapper"> -->
+                <!-- <label for="name" class="label">What is your name?</label> -->
+                <input type="text" name="query" id="query" placeholder="find Google images">
+                <input type="submit" value="Find">
+            <!-- </div> -->
+        </form>
+    </div>
+
+        
+</body>
+</html>

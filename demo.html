@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image search and extraction</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: lightsteelblue;
+            color: darkslateblue;
+            border-bottom: 3px ridge darkgrey;
+            height: 2em;
+            padding-left: 5px;
+            padding-top: 5px;
+        }
+    
+        #screen {
+            position: absolute;
+            /*
+            */
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            
+            /*
+            width: 100%;
+            height: 500px;
+            */
+            /*height: 100%;*/
+
+            border: 3px ridge darkgrey;
+            /*border-style: ridge;*/
+            /*border-bottom: 1px solid grey;*/
+        }
+
+        img {
+            position: absolute;
+            border: 1px solid red;
+            padding: 0;
+            margin: 0;
+        }
+
+        #popup {
+
+            display: none;
+
+            position: absolute;
+            top: 100px;
+            /*bottom: 0;*/
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+
+            width: 400px;
+            height: 150px;
+
+            /*
+            position: absolute;
+            top: 40%;
+            bottom: 50%;
+            left: 40%;
+            right: 45%;
+            */
+            /*
+            left: 50px;
+            right: 50px;
+            
+            min-width: 400px;
+            min-height: 150px;
+
+            max-width: 400px;
+            */
+            
+            /*height: 100%;*/
+
+            border: 4px outset lightgrey;
+            /*border-bottom: 1px solid grey;*/
+            padding: 15px;
+
+        }
+
+        input[type="text"] {
+            width: 87%;
+        }
+
+        form input[type="submit"] {
+            margin-left: 5px;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+        
+        .popupHeader {
+            position: relative;
+            background-color: lightsteelblue;
+            color: darkslateblue;
+            border-bottom: 3px ridge darkgrey;
+            height: 1.5em;
+            margin: -15px -15px 15px -15px;
+            padding-top: 5px;
+            padding-left: 5px;
+            font-weight: bold; 
+
+        }
+
+        input.popupClose {
+            position: absolute;
+            right: 5px;
+            
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+    </style>
+    <script src="script.js"></script>
+</head>
+<!-- <body onload="onLoad()"> -->
+<body>
+
+    <div id="screen"  onclick="screenClicked(event)">
+    </div>
+
+    <header>
+        <h2>Panel</h2>
+    </header>
+
+    <div id="popup">
+        <div class="popupHeader">
+            <span>Find and select an image</span>
+            <input class="popupClose" type="button" value="X" onclick="closePopup()">
+        </div>
+        <form class="subform">
+            <!-- <label for="name" class="label">What is your name?</label> -->
+            <input type="text" name="query" id="query" placeholder="find Google images">
+            <input type="button" value="Find" onclick="search()">
+        </form>
+    </div>
+        
+        
+</body>
+</html>
