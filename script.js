@@ -47,8 +47,11 @@ function search() {
     //url = 'https://www.google.com.ua/search?q=puppy&tbm=isch'; // empty
     //url = 'https://www.google.com.ua/search?q=puppy'; // empty
     //url = 'https://www.google.com/search?q=puppy';
-    url = 'https://api.qwant.com/api/search/images?count=10&offset=1&q=cars';
-    const json = fetch(url, { mode: 'no-cors' });
+    //url = 'https://cors.io/?https://www.google.com/search?q=puppy'; // fails: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.
+
+    //url = 'https://api.qwant.com/api/search/images?count=10&offset=1&q=cars';
+    url = 'https://cors.io/?https://api.qwant.com/api/search/images?count=10&offset=1&q=cars';
+    const json = fetch(url)//, { mode: 'no-cors' });
     json
         .then(data => {
             console.log( data );
