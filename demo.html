@@ -46,12 +46,14 @@
             /*border-bottom: 1px solid grey;*/
         }
 
+        /*
         img {
             position: absolute;
             border: 1px solid red;
             padding: 0;
             margin: 0;
         }
+        */
 
         #popup {
 
@@ -129,8 +131,8 @@
     </style>
     <script src="script.js"></script>
 </head>
-<!-- <body onload="onLoad()"> -->
-<body>
+<!-- <body> -->
+<body onload="onLoad()">
 
     <div id="screen"  onclick="screenClicked(event)">
     </div>
@@ -144,13 +146,39 @@
             <span>Find and select an image</span>
             <input class="popupClose" type="button" value="X" onclick="closePopup()">
         </div>
+
+        <!--  
         <form class="subform">
-            <!-- <label for="name" class="label">What is your name?</label> -->
             <input type="text" name="query" id="query" placeholder="find Google images">
             <input type="button" value="Find" onclick="search()">
         </form>
+        -->
+
+        <script>
+            (function() {
+              var cx = '001383903088535670958:hjkrbgc0nr0';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <!-- <gcse:search></gcse:search> -->
+          <gcse:searchbox></gcse:searchbox>
+          <gcse:searchresults disableWebSearch="true" 
+            defaultToImageSearch="true" imageSearchLayout="column"></gcse:searchresults>
+          
+
     </div>
-        
+    <!--  
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQihVZOhZZ73-ePag8fgdTAV-8Gf-9xchf2e8BrgfBCGySVDfxe_rkFkyZX" 
+        title="Funny Puppies And Cute Puppy Videos Compilation 2016 [BEST OF ..." class="gs-image gs-image-scalable" style="width: 112px; height: 84px;">    
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3BOQH7uvec_3EeMSN3fWaZZI68HPDg71rxmP-JPE7xsA_jV_5oYcnvg" 
+        title="In a Time of Uncertainty, a Divided Nation Searches for Puppies ..." class="gs-image gs-image-scalable" style="width: 112px; height: 84px;">        
+    -->
         
 </body>
 </html>
