@@ -2,6 +2,7 @@ var position;
 
 function onLoad() {
     console.log('DOM loaded');    
+    hideLoader();
 
     const body = document.getElementsByTagName('body')[0];
     body.onclick = function(event) {
@@ -44,10 +45,15 @@ function renderImageAt(src, top, left) {
     picture.style.position = 'absolute';
     picture.style.top = `${top}px`;
     picture.style.left = `${left}px`;
-    picture.style.border = '1px solid darkgrey';
+    //picture.style.border = '1px solid darkgrey';
 }    
 
 function closePopup() {
     const popup = document.getElementById('popup');    
+    popup.style.display = 'none';
+}
+
+function hideLoader() {
+    const popup = document.getElementById('loader');    
     popup.style.display = 'none';
 }

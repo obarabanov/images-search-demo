@@ -1,4 +1,9 @@
-## Functionality:
+## How to run
+
+Just open html page file in your browser, either locally or from web-server (like http://localhost).
+No outher dependencies used, so no need to install anything.
+
+## Functionality
 
 * there is initially an empty web page
 * when the user clicks on the screen a popup box appears
