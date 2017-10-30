@@ -28,83 +28,31 @@
     
         #screen {
             position: absolute;
-            /*
-            */
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
-            
-            /*
-            width: 100%;
-            height: 500px;
-            */
-            /*height: 100%;*/
-
             border: 3px ridge darkgrey;
-            /*border-style: ridge;*/
-            /*border-bottom: 1px solid grey;*/
         }
-
-        /*
-        img {
-            position: absolute;
-            border: 1px solid red;
-            padding: 0;
-            margin: 0;
-        }
-        */
 
         #popup {
-
             display: none;
 
             position: absolute;
+            z-index: 100;
             top: 100px;
-            /*bottom: 0;*/
             right: 0;
             left: 0;
             margin: 0 auto;
 
             width: 400px;
-            height: 150px;
+            height: 100px;
 
-            /*
-            position: absolute;
-            top: 40%;
-            bottom: 50%;
-            left: 40%;
-            right: 45%;
-            */
-            /*
-            left: 50px;
-            right: 50px;
-            
-            min-width: 400px;
-            min-height: 150px;
-
-            max-width: 400px;
-            */
-            
-            /*height: 100%;*/
-
+            background-color: white;
             border: 4px outset lightgrey;
-            /*border-bottom: 1px solid grey;*/
             padding: 15px;
-
         }
 
-        input[type="text"] {
-            width: 87%;
-        }
-
-        form input[type="submit"] {
-            margin-left: 5px;
-            padding-left: 3px;
-            padding-right: 3px;
-        }
-
-        
         .popupHeader {
             position: relative;
             background-color: lightsteelblue;
@@ -115,7 +63,6 @@
             padding-top: 5px;
             padding-left: 5px;
             font-weight: bold; 
-
         }
 
         input.popupClose {
@@ -128,8 +75,25 @@
             text-align: center;
         }
 
+        input[type="text"] {
+            width: 87%;
+        }
     </style>
+
     <script src="script.js"></script>
+
+    <!-- Google Custom Search  -->
+    <script>
+        (function() {
+            var cx = '001383903088535670958:hjkrbgc0nr0';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+    </script>
 </head>
 <!-- <body> -->
 <body onload="onLoad()">
@@ -138,7 +102,7 @@
     </div>
 
     <header>
-        <h2>Panel</h2>
+        <h2>Click the canvas below</h2>
     </header>
 
     <div id="popup">
@@ -147,38 +111,15 @@
             <input class="popupClose" type="button" value="X" onclick="closePopup()">
         </div>
 
-        <!--  
-        <form class="subform">
-            <input type="text" name="query" id="query" placeholder="find Google images">
-            <input type="button" value="Find" onclick="search()">
-        </form>
-        -->
-
-        <script>
-            (function() {
-              var cx = '001383903088535670958:hjkrbgc0nr0';
-              var gcse = document.createElement('script');
-              gcse.type = 'text/javascript';
-              gcse.async = true;
-              gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-              var s = document.getElementsByTagName('script')[0];
-              s.parentNode.insertBefore(gcse, s);
-            })();
-          </script>
-          <!-- <gcse:search></gcse:search> -->
-          <gcse:searchbox></gcse:searchbox>
-          <gcse:searchresults disableWebSearch="true" 
-            defaultToImageSearch="true" imageSearchLayout="column"></gcse:searchresults>
-          
+        <!-- <gcse:search></gcse:search> -->
+        <gcse:searchbox gname="gSearch"></gcse:searchbox>
+        <gcse:searchresults gname="gSearch" 
+            disableWebSearch="true" 
+            defaultToImageSearch="true" 
+            imageSearchLayout="classic"></gcse:searchresults>
+            <!-- classic, column, or popup -->
 
     </div>
-    <!--  
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQihVZOhZZ73-ePag8fgdTAV-8Gf-9xchf2e8BrgfBCGySVDfxe_rkFkyZX" 
-        title="Funny Puppies And Cute Puppy Videos Compilation 2016 [BEST OF ..." class="gs-image gs-image-scalable" style="width: 112px; height: 84px;">    
-
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3BOQH7uvec_3EeMSN3fWaZZI68HPDg71rxmP-JPE7xsA_jV_5oYcnvg" 
-        title="In a Time of Uncertainty, a Divided Nation Searches for Puppies ..." class="gs-image gs-image-scalable" style="width: 112px; height: 84px;">        
-    -->
         
 </body>
 </html>
