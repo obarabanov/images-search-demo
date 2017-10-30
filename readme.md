@@ -1,7 +1,7 @@
 ## How to run
 
 Just open html page file in your browser, either locally or from web-server (like http://localhost).
-No outher dependencies used, so no need to install anything.
+No external dependencies used, so no need to install anything.
 
 ## Functionality
 
